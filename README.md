@@ -47,14 +47,11 @@ Enterprise-style wireless and switching homelab used for:
 ---
 
 # Repository Structure
-
-```text
 configs/
 diagrams/
 incidents/
 runbooks/
 rf-surveys/
-```
 
 ---
 
