@@ -1,36 +1,34 @@
-# Home-Lab
 # Ruckus Networking Homelab
 
 ## Overview
 
-Enterprise-style wireless and switching homelab used for:
+Enterprise-style networking homelab focused on:
 
-- CompTIA Network+ studies
-- Ruckus Certified Wireless Admin (RCWA)
-- Wireless troubleshooting practice
-- VLAN and switching labs
+- CompTIA Network+
+- Ruckus RCWA
+- Wireless troubleshooting
+- VLAN design
 - Wi-Fi calling optimization
 
 ---
 
 # Hardware
 
-| Device | Model | Purpose |
-|---|---|---|
-| Switch | Ruckus ICX | Core switching |
-| AP-1 | Ruckus AP | Main floor coverage |
-| AP-2 | Ruckus AP | Upstairs coverage |
-| AP-3 | Ruckus AP | Garage/lab coverage |
+| Device | Purpose |
+|---|---|
+| Ruckus ICX Switch | Core switching |
+| AP-1 | Main floor Wi-Fi |
+| AP-2 | Upstairs Wi-Fi |
+| AP-3 | Garage/lab Wi-Fi |
 
 ---
 
 # Current Goals
 
 - Improve Wi-Fi roaming
-- Optimize Wi-Fi calling
-- Practice VLAN troubleshooting
-- Learn enterprise wireless operations
-- Build professional documentation habits
+- Practice enterprise troubleshooting
+- Learn VLAN segmentation
+- Document network operations professionally
 
 ---
 
@@ -38,7 +36,7 @@ Enterprise-style wireless and switching homelab used for:
 
 | VLAN | Name | Purpose |
 |---|---|---|
-| 10 | MGMT | Infrastructure management |
+| 10 | MGMT | Infrastructure |
 | 20 | HOME | User devices |
 | 30 | LAB | Testing |
 | 40 | IOT | Smart devices |
@@ -47,17 +45,12 @@ Enterprise-style wireless and switching homelab used for:
 ---
 
 # Repository Structure
+
+```text
 configs/
 diagrams/
 incidents/
 runbooks/
 rf-surveys/
-
----
-
-# Current Projects
-
-- AP transmit power tuning
-- Fast roaming configuration
-- Channel overlap reduction
-- RF coverage mapping
+changelog/
+```
