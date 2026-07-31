@@ -2,27 +2,35 @@
 
 ## Overview
 
-Enterprise-style networking home lab used for hands-on learning, controlled testing, troubleshooting, and professional operations documentation.
+Enterprise-style wireless and networking home lab used for hands-on learning, controlled testing, troubleshooting, and professional operations documentation.
 
 Primary focus areas:
 
-- CompTIA Network+
-- Ruckus wireless administration
-- VLAN design and segmentation
-- Wi-Fi roaming and calling optimization
+- CWNA-109 concepts and practical Wi-Fi fundamentals
+- Applicable RUCKUS Certified Wi-Fi Associate (RCWA) concepts
+- RUCKUS Unleashed administration
+- RF observation, WLAN design, roaming, security, and troubleshooting
+- ICX switching and VLAN foundations where the architecture permits
 - Incident, change, and lab documentation
+
+## Governing documents
+
+- [Home Lab Charter](governance/HOME-LAB-CHARTER.md) — purpose, scope, safety, operating principles, and completion standards
+- [CWNA-109 Lab Exercise Map](curriculum/CWNA-109-LAB-MAP.md) — planned exercises mapped to CWNA knowledge areas and applicable RUCKUS skills
+- [Lab Log Standard and Index](lab-log/README.md) — what should be logged and how entries are published
+- [VLAN Plan](vlan-plan.md) — target segmentation design and current implementation status
 
 ## Environment
 
 | Device | Role | State |
 |---|---|---|
-| Xfinity XB6 | Internet gateway | Implemented |
-| Ruckus ICX 7650 | Core switching | Implemented |
-| Ruckus R650 | Primary Unleashed AP | Implemented |
-| Ruckus H350 #1 | Secondary / lab AP | Implemented; role under refinement |
-| Ruckus H350 #2 | Expansion / isolated-lab AP | Planned or in testing |
+| Xfinity XB6 | Internet gateway and upstream NAT boundary | Implemented |
+| RUCKUS ICX switch | Core switching, PoE, and lab Layer 2/Layer 3 functions | Implemented; exact model to verify in inventory |
+| RUCKUS R650 | Primary Unleashed access point | Implemented |
+| RUCKUS H350 #1 | Secondary / lab AP | Implemented; role under refinement |
+| RUCKUS H350 #2 | Expansion / isolated-lab AP | Planned or in testing |
 
-> This is also a household production network. Lab changes must be designed to minimize disruption and include verification and rollback steps.
+> This is also a household production network. Lab changes must minimize disruption and include verification and rollback steps.
 
 ## VLAN Plan
 
@@ -39,6 +47,8 @@ The table is a target design, not proof that every VLAN is currently deployed. S
 ## Repository Structure
 
 ```text
+governance/     Purpose, scope, safety, and operating standards
+curriculum/     Certification-aligned exercise roadmaps
 configs/        Sanitized configuration examples
 diagrams/       Logical and physical topology diagrams
 incidents/      Service-impacting events and root-cause analysis
@@ -52,12 +62,13 @@ lab-log/        Chronological experiments, installations, and tests
 
 ## Lab-log workflow
 
-1. Record a lab action in ChatGPT or open the **Lab Log Entry** issue form.
-2. Sanitize secrets and sensitive identifiers.
-3. Publish the entry to a dedicated branch.
-4. Open a draft pull request.
-5. Review the rendered Markdown and diff.
-6. Merge only after explicit approval.
+1. Record a meaningful lab action in ChatGPT or through the repository workflow.
+2. Separate observed facts from interpretation.
+3. Sanitize secrets and sensitive identifiers.
+4. Publish the entry to a dedicated branch.
+5. Open a draft pull request.
+6. Review the rendered Markdown and diff.
+7. Merge only after explicit approval.
 
 See [`lab-log/README.md`](lab-log/README.md) for details.
 
