@@ -45,4 +45,5 @@ Each entry should separate directly observed facts from interpretation and inclu
 
 ### 2026
 
+- [ICX Unleashed adoption troubleshooting](2026/2026-07-30-icx-unleashed-adoption-troubleshooting.md)
 - [XB6 upstream routing limitation for multi-VLAN design](2026/2026-07-30-xb6-upstream-routing-limitation.md)
