@@ -1,1 +1,33 @@
+# LAB-004: Isolated VLAN and MAC Behavior
 
+**Risk:** Moderate; configuration change on production switch
+**Modules:** 03, 10
+**Objectives:** N10-009 2.2, 4.1, 5.3; RCWA VLAN tagging plan
+
+## Objective
+
+Create one temporary isolated Layer 2 LAB VLAN, prove its broadcast boundary and MAC-table separation, and restore the starting state. Internet access is not an objective.
+
+## Preconditions
+
+- Approved window, current backup, console/recovery access, two known test ports/clients, and exact rollback commands.
+- Confirm the installed FastIron documentation and syntax.
+- Do not modify XB6, AP uplinks, household ports, or management reachability.
+
+## Procedure
+
+1. Record starting port/VLAN/MAC state and connectivity matrix.
+2. Create a temporary isolated VLAN using documented syntax.
+3. Assign only the two dedicated test ports as untagged members.
+4. Give test clients temporary same-subnet addresses; do not add a production gateway.
+5. Test client-to-client traffic and observe MAC learning within the VLAN.
+6. Run negative tests to gateway, production clients, and management addresses.
+7. Restore original port membership, remove the temporary VLAN if appropriate, and restore client settings.
+
+## Success and stop conditions
+
+Success requires test-peer reachability, all prohibited paths denied, and full starting-state restoration. Stop and roll back immediately if household connectivity, AP/switch management, unexpected ports, or production VLAN state changes.
+
+## Deliverables
+
+Approved change record, sanitized before/during/after evidence, positive/negative matrix, rollback proof, and lessons learned.

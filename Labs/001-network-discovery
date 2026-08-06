@@ -1,1 +1,35 @@
+# LAB-001: Network Discovery and Baseline
 
+**Risk:** Low/read-only
+**Modules:** 00
+**Objectives:** N10-009 1.2, 1.6, 3.1, 3.2; RCWA management and product inventory
+
+## Objective
+
+Produce a sanitized, evidence-backed physical and logical inventory without changing network state.
+
+## Prerequisites and safety
+
+- Read `SECURITY.md`; use aliases for devices and clients.
+- Do not run discovery outside the owned private network.
+- Record observed data separately from inferred roles.
+
+## Procedure
+
+1. Record XB6, ICX 7150-C08P, R650, both H350s, and two test clients by alias, role, connection, management method, software family, and observed state.
+2. Inspect ICX link, speed, duplex, PoE, VLAN, LLDP, and interface counters using read-only views.
+3. Inspect Unleashed AP, radio, WLAN, and client inventory using read-only views.
+4. On a test client, record sanitized address, prefix, gateway, DNS, DHCP, Wi-Fi band/channel/BSSID alias, and route table.
+5. Draw physical links and logical service/traffic boundaries. Label XB6 NAT/DHCP/DNS and the Unleashed master role.
+6. Mark every item Observed, Inferred, Planned, or Unknown.
+
+## Verification
+
+- Physical and logical diagrams agree with evidence.
+- Current and planned VLANs are not confused.
+- AP and switch counts match their management views.
+- Staged material contains no prohibited identifier or secret.
+
+## Deliverables
+
+Completed lab record, two diagrams, sanitized inventory, baseline table, limitations, and follow-up questions.

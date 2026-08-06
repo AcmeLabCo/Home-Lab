@@ -2,7 +2,7 @@
 
 **Status:** Planned — not currently implemented.
 
-The Ruckus ICX 7650 supports VLAN creation and Layer 3 routing. The target design below was not completed because the upstream Xfinity XB6 gateway does not expose the static-route or equivalent return-path controls needed for clean internet-connected multi-subnet operation.
+The RUCKUS ICX 7150-C08P supports the switching functions needed to build isolated VLAN exercises, and available Layer 3 features can be evaluated in a controlled lab. The target production design was not completed because the upstream Xfinity XB6 gateway does not expose the static-route or equivalent return-path controls needed for clean internet-connected multi-subnet operation.
 
 | VLAN | Name | Purpose | State |
 |---|---|---|---|
@@ -26,9 +26,20 @@ These statements describe the target architecture, not the current production st
 For internet-connected routed VLANs, the upstream edge must either:
 
 1. know routes back to each VLAN subnet, or
-2. be replaced or bypassed by a VLAN-aware router/firewall that performs routing, DHCP, policy enforcement, and NAT.
+2. be replaced or bypassed by a VLAN-aware router/firewall, such as the planned OPNsense system, that performs routing, DHCP, policy enforcement, and NAT.
 
-The current XB6 configuration does not provide the required routing controls. Deployment is therefore deferred pending an edge-router decision.
+The current XB6 configuration does not provide the required routing controls. Deployment is therefore deferred pending the staged OPNsense edge-router project.
+
+## Migration gates
+
+No production cutover occurs until all gates pass:
+
+1. Back up and sanitize the current XB6, ICX, and Unleashed state.
+2. Inventory household dependencies, including Wi-Fi calling and devices that cannot tolerate an address change.
+3. Build OPNsense offline or behind the current edge and document interfaces, VLANs, DHCP scopes, DNS, NAT, and least-privilege policies.
+4. Validate one isolated LAB VLAN before HOME, IOT, GUEST, or MGMT migration.
+5. Prepare an explicit bridge-mode/cabling cutover sequence and a time-bounded rollback to the XB6.
+6. Verify gateway, DNS, DHCP, internet, AP management, switch management, guest isolation, and Wi-Fi calling after cutover.
 
 ## Related lab entry
 

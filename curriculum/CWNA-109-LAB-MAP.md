@@ -151,11 +151,11 @@ Some labs should be repeated after major topology, firmware, or AP-placement cha
 - The XB6 currently limits clean internet-connected routed VLAN deployment.
 - Dedicated spectrum analysis, enterprise AAA, and controller-scale workflows require additional resources.
 - RUCKUS product interfaces and available features vary by model and software release.
-- Exact RCWA objective mapping is intentionally high-level until a current authoritative objective list is available.
+- This legacy map keeps RCWA references intentionally high-level. Use `RCWA-OBJECTIVE-MAP.md` for the authoritative 2025 blueprint mapping.
 
 ## Sources and version control
 
 - CWNA target: CWNA-109, released September 30, 2023, as identified on the official CWNP certification page.
-- RUCKUS target: applicable Wi-Fi administration skills available through RUCKUS Unleashed and the installed hardware.
+- RUCKUS target: the 2025 RCWA blueprint, mapped in `RCWA-OBJECTIVE-MAP.md`; this file remains supplemental CWNA-oriented practice.
 
 Review this map whenever the CWNA exam version, RUCKUS curriculum, firmware, or lab architecture changes.

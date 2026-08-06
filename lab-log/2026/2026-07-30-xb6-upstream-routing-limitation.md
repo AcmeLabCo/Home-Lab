@@ -8,19 +8,19 @@
 
 ## Objective
 
-Determine whether the existing Xfinity XB6 gateway and Ruckus ICX 7650 could support multiple internet-connected VLAN-backed subnets without adding another edge router or firewall.
+Determine whether the existing Xfinity XB6 gateway and RUCKUS ICX 7150-C08P could support multiple internet-connected VLAN-backed subnets without adding another edge router or firewall.
 
 ## Starting state
 
 - The XB6 provided the active internet gateway, NAT boundary, DHCP service, and household LAN.
-- The Ruckus ICX 7650 provided managed switching and Layer 3 capability.
+- The RUCKUS ICX 7150-C08P provided managed switching and available Layer 3 capability.
 - A target VLAN design existed for management, home, lab, IoT, and guest traffic.
 - The VLAN design had not been verified as implemented.
 
 ## Actions performed
 
 1. Reviewed the intended multi-VLAN architecture.
-2. Confirmed that the ICX 7650 can create VLANs and perform internal Layer 3 routing.
+2. Confirmed that the ICX platform can create VLANs and evaluated internal Layer 3 routing as part of the intended design.
 3. Evaluated the upstream return-path requirement for VLAN subnets reaching the internet.
 4. Reviewed the XB6 role as the active NAT gateway.
 5. Determined that the available XB6 management controls did not provide the static-route or equivalent upstream routing functions required for the proposed design.
@@ -47,7 +47,7 @@ The planned internet-connected VLAN deployment was deferred. No production VLAN 
 
 ## Observations
 
-- The ICX 7650 is capable of VLAN creation and inter-VLAN routing.
+- The ICX 7150-C08P is capable of the VLAN lab functions required by this curriculum; exact routed-production behavior must be validated against the installed FastIron release and configuration.
 - The XB6 remained the active upstream NAT gateway.
 - The XB6 interface available in this environment did not expose the required custom route controls.
 - The existing repository wording could be read as though VLANs and trunks were already implemented.

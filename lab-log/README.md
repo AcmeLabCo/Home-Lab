@@ -32,6 +32,8 @@ Each entry should separate directly observed facts from interpretation and inclu
 - Lessons learned
 - Follow-up actions
 
+Start from [`templates/lab-template.md`](../templates/lab-template.md) for new work. Existing historical records do not need to be rewritten, but their limitations and confidence notes must remain visible.
+
 ## Publishing workflow
 
 1. Capture the completed work and evidence.
