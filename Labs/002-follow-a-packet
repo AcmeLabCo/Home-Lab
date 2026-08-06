@@ -1,1 +1,26 @@
+# LAB-002: Follow a Packet
 
+**Risk:** Low/read-only
+**Modules:** 01
+**Objectives:** N10-009 1.1, 1.4, 5.5
+
+## Objective
+
+Explain the complete path for a client DNS lookup and HTTPS connection using client-generated capture evidence.
+
+## Procedure
+
+1. Record the test client's sanitized IP, gateway, DNS server, Wi-Fi BSSID alias, and interface.
+2. Start a local capture restricted to the test client's own traffic.
+3. Clear or vary a test hostname safely, then generate a DNS lookup and an HTTPS request.
+4. Identify ARP or neighbor discovery, DNS, TCP handshake, TLS setup, data exchange, and connection close where visible.
+5. Run a route trace and compare its Layer 3 path with the local Layer 2/RF path.
+6. Annotate source/destination MAC, IP, port, protocol, OSI layer, and encapsulation at each local boundary.
+
+## Verification
+
+Explain why wireless capture and client capture may expose different headers; where 802.11 becomes 802.3; what the XB6 changes with NAT; and how DNS, routing, or TLS failure would look different.
+
+## Deliverables
+
+Sanitized packet excerpts, one sequence diagram, protocol/port table, verification answers, and reflection.

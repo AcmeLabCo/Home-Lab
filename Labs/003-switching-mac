@@ -1,1 +1,26 @@
+# LAB-003: Switching and MAC Learning
 
+**Risk:** Low/read-only
+**Modules:** 03
+**Objectives:** N10-009 2.2, 5.3, 5.5
+
+## Objective
+
+Observe how the ICX 7150-C08P learns and forwards by source MAC within the current Layer 2 domain.
+
+## Procedure
+
+1. Record relevant port aliases, link state, VLAN membership, and a sanitized MAC-table baseline.
+2. Generate owned test traffic between two local test devices and to the gateway.
+3. Re-read the MAC table and correlate each learned address with ingress port and VLAN.
+4. Compare MAC, ARP/neighbor, and client tables; explain why they contain different mappings.
+5. Inspect counters for errors, drops, speed, duplex, and PoE without changing them.
+6. Predict the effect of a destination not yet in the table, a broadcast, and moving a client to another port.
+
+## Verification
+
+The learner can explain learning from source address, known/unknown unicast forwarding, broadcast scope, table aging, and why a MAC-table entry does not prove IP reachability.
+
+## Deliverables
+
+Before/after sanitized tables, port/VLAN diagram, predictions versus observations, and no configuration change.

@@ -1,1 +1,26 @@
+# LAB-005: DHCP and Client Configuration
 
+**Risk:** Low/read-only core; optional fault injection must be isolated
+**Modules:** 02, 09
+**Objectives:** N10-009 1.7, 3.4, 5.3, 5.5
+
+## Objective
+
+Observe DHCP DORA, interpret lease options, and distinguish DHCP failure from gateway or DNS failure.
+
+## Procedure
+
+1. Record the client's configured and effective IP, prefix, gateway, DNS, DHCP server, lease times, and interface using aliases/sanitized values.
+2. Capture only the owned test client's lease renewal. Avoid disrupting production lease state.
+3. Identify Discover, Offer, Request, and Acknowledgment when a full exchange is safely available, or document renewal behavior and why it differs.
+4. Map observed options to client configuration.
+5. Verify local subnet, gateway, external IP, DNS lookup, and application access separately.
+6. In an isolated virtual or LAB network only, test one DHCP fault such as missing service, exhausted tiny scope, wrong gateway option, or duplicate static address.
+
+## Verification
+
+Explain APIPA, broadcast use before configuration, reservation versus exclusion, lease renewal, relay requirement, and the tests that separate DHCP, routing, DNS, and application problems.
+
+## Deliverables
+
+Sanitized DORA/renewal trace, option table, layered validation matrix, optional fault record, and restoration proof.

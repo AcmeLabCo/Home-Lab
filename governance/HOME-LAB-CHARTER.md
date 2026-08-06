@@ -4,7 +4,7 @@
 
 The AcmeLabCo Home Lab is a controlled wireless and networking environment used to build practical competence in Wi-Fi fundamentals, administration, troubleshooting, design, and operations.
 
-The primary learning objective is to reinforce the knowledge areas covered by the CWNA-109 curriculum through direct observation, measurement, configuration, and troubleshooting. A secondary objective is to practice as many RUCKUS Certified Wi-Fi Associate (RCWA) concepts as the available hardware and Unleashed platform permit.
+The primary learning objective is to build and prove the skills in CompTIA Network+ N10-009 and the current RUCKUS Certified Wi-Fi Associate (RCWA) blueprint through direct observation, measurement, configuration, and troubleshooting. The preserved CWNA-109 map provides additional vendor-neutral wireless depth.
 
 The lab is not intended to reproduce every enterprise feature, controller architecture, authentication system, or large-scale deployment scenario. Where a curriculum objective cannot be reproduced faithfully, the limitation must be documented rather than implied away.
 
@@ -15,7 +15,7 @@ The lab currently includes:
 | Component | Function |
 |---|---|
 | Xfinity XB6 | Residential internet gateway and upstream NAT boundary |
-| RUCKUS ICX switch | Wired switching, PoE, and available Layer 2/Layer 3 lab functions |
+| RUCKUS ICX 7150-C08P | Wired switching, PoE, and available Layer 2/Layer 3 lab functions |
 | RUCKUS R650 | Primary Unleashed access point |
 | RUCKUS H350 access points | Secondary, room-level, and controlled lab wireless functions |
 | Client devices | Association, roaming, security, performance, and troubleshooting tests |
@@ -155,9 +155,7 @@ Progress should be assessed by demonstrated capability rather than the number of
 
 ## 9. Curriculum references
 
-This charter is aligned at a high level to the current CWNA-109 areas published by CWNP: RF technologies, antenna concepts, WLAN hardware and software, design and management, standards, 802.11 architecture, security, troubleshooting, and site surveys.
-
-RUCKUS work is aligned to the vendor's stated certification purpose of installing, configuring, managing, and supporting RUCKUS solutions. Exact RCWA objective mapping should be updated when an authoritative current RCWA study guide or course-objective list is available.
+The integrated curriculum is mapped to CompTIA Network+ N10-009 Exam Objectives version 4.0 and the 2025 RCWA Exam Study Guide blueprint. The CWNA-109 exercise map is retained as supplemental wireless practice. Version details and links are maintained in `curriculum/SOURCES.md`; mappings must be reviewed when an issuing organization updates its blueprint.
 
 ## 10. Review cycle
 
